@@ -6,10 +6,18 @@ import MainBtn from '../Cards/MainBtn'
 import { FiMenu } from 'react-icons/fi'
 import MobileMenu from './MobileMenu'
 import {BsSearch} from 'react-icons/bs'
+import { Avatar, Button, Menu, MenuItem } from '@mui/material'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
-  const [open, setOpen] = useState(false)
+const [anchorEl, setAnchorEl] = React.useState(null)
+const open = Boolean(anchorEl)
+const handleClick = (event) => {
+  setAnchorEl(event.currentTarget)
+}
+const handleClose = () => {
+  setAnchorEl(null)
+}
 
   return (
     <div className="w-full min-w-[100%] bg-white shadow-md">
@@ -32,7 +40,9 @@ const Navbar = () => {
 
         {/* lgoo  */}
         <div>
+          <Link href={'/'}>
           <h1 className="font-extrabold text-4xl">Logo</h1>
+          </Link>
           {/* <img
             src="/images/logo_dark_background.png"
             className="w-[300px] h-[60px] object-contain"
@@ -79,7 +89,31 @@ const Navbar = () => {
 
         {/* buttons  */}
         {/* <div onClick={() => setOpen(!open)}> */}
-        <MainBtn text={'Help & Support'} />
+        {/* <MainBtn text={'Help & Support'} /> */}
+
+        <Button
+          id="basic-button"
+          aria-controls={open ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+        >
+          <Avatar alt="Remy Sharp" src="/images/person1.jpg" />
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
+        >
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <MenuItem onClick={handleClose}>My account</MenuItem>
+          <MenuItem onClick={handleClose}>Logout</MenuItem>
+        </Menu>
+
         {/* </div> */}
       </div>
     </div>

@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { Avatar, Button, CardActionArea, CardActions } from '@mui/material'
 import { Box } from '@mui/system'
+import Link from 'next/link'
 
 export default function Diet() {
   return (
@@ -37,9 +38,11 @@ export default function Diet() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" variant='contained'  className='bg-blue-500 w-full'>
+        <Link href={'/diet/123'} className='cursor-pointer'>
+        <Button size="small" variant='contained'  className='bg-gray-900 w-full'>
           Explore Plan
         </Button>
+        </Link>
       </CardActions>
     </Card>
   )

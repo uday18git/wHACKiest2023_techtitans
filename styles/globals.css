@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --theme: #026E66
+}
 
 @layer components{
   .container{
@@ -13,7 +16,33 @@
   .grid-gallery-item_check-button{
     @apply !hidden hover:hidden
   }
+  .swiper-button-next{
+    @apply !bg-white !text-white
+  }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #FFFFFF !important;
+  padding: 25px !important;
+  border: 1px solid var(--theme);
+}
+
+
+.swiper-button-next {
+  right: 4px !important;
+}
+
+.swiper-button-prev {
+  left: 4px !important;
+}
+
+.swiper-hero .swiper-button-prev::after,
+.swiper-hero .swiper-button-next::after {
+  color: var(--theme) !important;
+  font-size: 20px !important;
+}
+
 
 
 .swiper {

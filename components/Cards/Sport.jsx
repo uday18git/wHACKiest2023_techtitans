@@ -13,6 +13,7 @@ const Sport = () => {
         <h3 className="font-semibold text-gray-700 px-4 py-2">live in 3hrs</h3>
       </div>
       <div className='absolute bottom-14 right-4'>
+        
 <TransparentBtn text={'Discover'} classes={'hover:text-white text-white border-white'} />
       </div>
     </div>
