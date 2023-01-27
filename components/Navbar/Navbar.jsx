@@ -5,6 +5,7 @@ import { IoMdArrowDropdown } from 'react-icons/io'
 import MainBtn from '../Cards/MainBtn'
 import { FiMenu } from 'react-icons/fi'
 import MobileMenu from './MobileMenu'
+import {BsSearch} from 'react-icons/bs'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -15,7 +16,7 @@ const Navbar = () => {
       {/* {open && <Booking open={open} setOpen={setOpen} />} */}
       {/* links  */}
       <div className="flex items-center justify-between  container w-full">
-        <div
+        {/* <div
           onClick={() => {
             setMobileMenu(!mobileMenu)
           }}
@@ -27,8 +28,19 @@ const Navbar = () => {
               <MobileMenu data={navData} />
             </div>
           )}
+        </div> */}
+
+        {/* lgoo  */}
+        <div>
+          <h1 className="font-extrabold text-4xl">Logo</h1>
+          {/* <img
+            src="/images/logo_dark_background.png"
+            className="w-[300px] h-[60px] object-contain"
+            alt=""
+          /> */}
         </div>
-        <div className="hidden md:flex items-center space-x-6 relative">
+
+        {/* <div className="hidden md:flex items-center space-x-6 relative">
           {navData.map(({ title, link, submenu }, i) => (
             <div key={i} className="group">
               <Link href={link || '/'} className="flex  items-center space-x-1">
@@ -51,21 +63,23 @@ const Navbar = () => {
               )}
             </div>
           ))}
+        </div> */}
+
+        <div className="  rounded-md min-w-[500px] px-4 border-[1px] bg-gray-100 hidden md:flex border-gray-800 items-center">
+          <input
+            type="text"
+            className="w-full  py-3 px-3  outline-none bg-gray-100"
+            placeholder="search for events , diets and more"
+          />
+
+          <BsSearch className="text-xl cursor-pointer" />
         </div>
 
-        {/* lgoo  */}
-        <div>
-          <h1 className="font-extrabold text-4xl">Logo</h1>
-          {/* <img
-            src="/images/logo_dark_background.png"
-            className="w-[300px] h-[60px] object-contain"
-            alt=""
-          /> */}
-        </div>
+        <BsSearch className="text-xl cursor-pointer md:hidden" />
 
         {/* buttons  */}
         {/* <div onClick={() => setOpen(!open)}> */}
-          <MainBtn text={'Help & Support'} />
+        <MainBtn text={'Help & Support'} />
         {/* </div> */}
       </div>
     </div>

@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import Layout from '@/components/Layouts/Layout'
 import Hero from '@/components/Hero/Hero'
 import DietSection from '@/components/Diets'
+import WhatYouGet from '@/components/WhatYouGet'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <Layout>
         <Hero />
+        <WhatYouGet/>
         <DietSection/>
       </Layout>
     </div>

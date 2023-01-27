@@ -15,7 +15,7 @@ export default function Diet() {
           height="110"
           image="/images/food1.jpg"
           alt="green iguana"
-          className="h-[200px] w-full"
+          className="h-[200px] w-full hover:scale-110 duration-200 transition-all ease-in-out"
         />
         <CardContent className=''>
           <Typography gutterBottom variant="h5" component="div">
