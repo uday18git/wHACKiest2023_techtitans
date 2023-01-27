@@ -137,7 +137,7 @@ const Profile = () => {
             </div>
 
             <div className="bg-black h-[2px] w-full mt-4" />
-            <div className="w-full bg-gray-50 flex justify-between">
+            <div className="w-full grid bg-gray-50 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {badgeData.map((item, i) => (
                 <div className="flex gap-3 py-2 px-3">
                   <div className="flex gap-3  items-center mx-auto">
@@ -163,15 +163,44 @@ const Profile = () => {
 
             <div className="flex md:flex-row flex-col gap-2 space-x-5 items-center">
               <div className="flex-1 max-w-[400px]">
+                <div className="flex items-center gap-4 mt-5 mb-5">
+                  <div className="flex items-center gap-2">
+                    <div className="w-[20px] h-[20px] bg-[#E38627]" />
+                    <p className="text-sm font-semibold">muscle strength</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-[20px] h-[20px] bg-[#C13C37]" />
+                    <p className="text-sm font-semibold">Stamina</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-[20px] h-[20px] bg-[#6A2135]" />
+                    <p className="text-sm font-semibold">weight</p>
+                  </div>
+                </div>
+
                 <PieChart
                   data={[
-                    { title: 'One', value: 10, color: '#E38627' },
-                    { title: 'Two', value: 15, color: '#C13C37' },
-                    { title: 'Three', value: 20, color: '#6A2135' },
+                    { title: 'One', value: 10, color: '#E38627', label: 'Ten' },
+                    {
+                      title: 'Two',
+                      value: 15,
+                      color: '#C13C37',
+                      label: 'Fifteen',
+                    },
+                    {
+                      title: 'Three',
+                      value: 20,
+                      color: '#6A2135',
+                      label: 'Twenty',
+                    },
                   ]}
+                  labelStyle={{
+                    fontSize: '50px',
+                    fontFamily: 'sans-serif',
+                    fill: 'white',
+                  }}
+                  labelPosition={'center'}
                 />
-
-              
               </div>
 
               <div className="flex flex-col mt-10 gap-3 flex-1 w-full">
