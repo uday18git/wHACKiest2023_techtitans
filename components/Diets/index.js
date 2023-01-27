@@ -3,6 +3,7 @@ import React from 'react'
 import Diet from '../Cards/Diet'
 import { motion } from 'framer-motion'
 import TransparentBtn from '../Cards/TransparentBtn'
+import Link from 'next/link'
 
 const DietSection = () => {
   return (
@@ -24,10 +25,12 @@ const DietSection = () => {
         ))}
       </div>
 
+<Link href={'/diets'}>
       <TransparentBtn
         text={'View More'}
         classes={'text-gray-900 border-gray-900 max-w-[200px] mx-auto'}
-      />
+        />
+        </Link>
     </div>
   )
 }

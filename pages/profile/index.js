@@ -108,7 +108,7 @@ const Profile = () => {
     <Layout>
       <div className="bg-gray-50">
         <div className="min-h-screen  container">
-          <div className="bg-white shadow-md px-5 py-3 flex flex-col">
+          <div className="bg-white  shadow-md px-5 py-5 flex flex-col">
             <div className="flex gap-3 items-center ">
               <img
                 src="https://cdn.siasat.com/wp-content/uploads/2021/03/srk.jpg"
@@ -118,7 +118,7 @@ const Profile = () => {
 
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-2">
-                  <h3 className="font-semibold text-gray-900 text-xl">
+                  <h3 className="font-semibold uppercase text-gray-900 text-xl">
                     Shahrukh Khan
                   </h3>
                   <VerifiedIcon
@@ -245,7 +245,7 @@ const Profile = () => {
               </h2>
               <div className="flex items-center gap-10 mt-10">
                 {icons.map(({ icon }, i) => (
-                  <img src={icon} alt="" className="w-[70px] cursor-pointer" />
+                  <img src={icon} alt="" className="w-[40px] cursor-pointer" />
                 ))}
               </div>
             </div>

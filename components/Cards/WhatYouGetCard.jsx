@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 
 const WhatYouGetCard = ({index}) => {
   return (
-    <div className="w-full max-w-[900px] mx-auto px-4 py-3">
+    <div className=" w-full container  mx-auto px-4 py-3">
       {index % 2 == 0 ? (
-        <div className="flex items-center gap-4 ">
+        <div className="flex flex-col lg:flex-row items-center gap-4 ">
           <motion.img
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 100 }}
@@ -30,14 +30,16 @@ const WhatYouGetCard = ({index}) => {
               veritatis obcaecati beatae corrupti voluptates quis nobis alias.
               Beatae, ut distinctio!
             </p>
-            <TransparentBtn
-              text={'Try Now'}
-              classes={'text-blue-700 max-w-[200px] mr-auto'}
-            />
+            <a href="#diet">
+              <TransparentBtn
+                text={'Try Now'}
+                classes={'text-blue-700 max-w-[200px] mr-auto'}
+              />
+            </a>
           </motion.div>
         </div>
       ) : (
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col lg:flex-row  items-center gap-3">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 100 }}
@@ -52,10 +54,12 @@ const WhatYouGetCard = ({index}) => {
               veritatis obcaecati beatae corrupti voluptates quis nobis alias.
               Beatae, ut distinctio!
             </p>
-            <TransparentBtn
-              text={'Try Now'}
-              classes={'text-blue-700 max-w-[200px] mr-auto'}
-            />
+            <a href="#diet">
+              <TransparentBtn
+                text={'Try Now'}
+                classes={'text-blue-700 max-w-[200px] mr-auto'}
+              />
+            </a>
           </motion.div>
           <motion.img
             initial={{ x: 100, opacity: 0 }}

@@ -20,7 +20,9 @@ const WhatYouGet = () => {
 
         <div className="mt-14 flex flex-col gap-5  ">
           {[0, 1, 2, 3].map((item, i) => (
-            <WhatYouGetCard key={i} index={i} />
+            <div className='overflow-hidden container'>
+             <WhatYouGetCard key={i} index={i} />
+            </div>
           ))}
         </div>
       </div>
