@@ -1,6 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { motion } from 'framer-motion'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -22,8 +22,13 @@ const Hero = () => {
             className="w-full h-full object-cover brightness-50 contrast-125"
             alt=""
           />
-          <div className="!absolute z-[999] space-y-4 top-[20%] left-[8%] md:left-[20%] max-w-[550px] text-left">
-            <h1 className="!text-white leading-[60px] text-5xl  font-bold ">
+          <motion.div 
+          // inital={{opacity:0}}
+          // animate={{opacity:1,duration:0.5}}
+          whileInView={{opacity:1}}
+          transition={{delay:0.2,duration:0.5}}
+          className="!absolute z-[999] space-y-4 top-[20%] left-[8%] md:left-[20%] max-w-[550px] text-left">
+            <h1 className="!text-white  leading-[60px] text-5xl  font-bold ">
               Its not about the destination. It's About the Journey
             </h1>
             <p className="font-semibold text-white text-md">
@@ -31,7 +36,7 @@ const Hero = () => {
               Laboriosam, voluptatum?
             </p>
             <TransparentBtn text={'Discover More'} />
-          </div>
+          </motion.div>
         </div>
       </SwiperSlide>
       <SwiperSlide>

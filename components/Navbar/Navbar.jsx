@@ -7,8 +7,9 @@ import { FiMenu } from 'react-icons/fi'
 import MobileMenu from './MobileMenu'
 import {BsSearch} from 'react-icons/bs'
 import { Avatar, Button, Menu, MenuItem } from '@mui/material'
+import SearchDialog from './SearchDialog'
 
-const Navbar = () => {
+const Navbar = ({openSearch,setOpenSearch}) => {
   const [mobileMenu, setMobileMenu] = useState(false)
 const [anchorEl, setAnchorEl] = React.useState(null)
 const open = Boolean(anchorEl)
@@ -18,6 +19,7 @@ const handleClick = (event) => {
 const handleClose = () => {
   setAnchorEl(null)
 }
+
 
   return (
     <div className="w-full min-w-[100%] bg-white shadow-md">
@@ -41,7 +43,7 @@ const handleClose = () => {
         {/* lgoo  */}
         <div>
           <Link href={'/'}>
-          <h1 className="font-extrabold text-4xl">Logo</h1>
+            <h1 className="font-extrabold text-4xl">Logo</h1>
           </Link>
           {/* <img
             src="/images/logo_dark_background.png"
@@ -85,7 +87,12 @@ const handleClose = () => {
           <BsSearch className="text-xl cursor-pointer" />
         </div>
 
-        <BsSearch className="text-xl cursor-pointer md:hidden" />
+        <BsSearch
+          onClick={() => setOpenSearch(!openSearch)}
+          className="text-xl cursor-pointer md:hidden"
+        />
+
+       
 
         {/* buttons  */}
         {/* <div onClick={() => setOpen(!open)}> */}
@@ -109,8 +116,10 @@ const handleClose = () => {
             'aria-labelledby': 'basic-button',
           }}
         >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
+          <Link href={'/profile'}>
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+          </Link>
+          {/* <MenuItem onClick={handleClose}>My account</MenuItem> */}
           <MenuItem onClick={handleClose}>Logout</MenuItem>
         </Menu>
 
