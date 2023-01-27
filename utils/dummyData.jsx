@@ -80,3 +80,59 @@ export const images = [
  
   
 ]
+
+
+export const replies = [
+  {
+    message: `Hi! I'm Mr. Chatbot 😎 Nice to meet you! 👋. How can I help you?`,
+    options: [
+      { id: '01', option: 'Tell me services' },
+      { id: '02', option: 'Which Material you use?' },
+      { id: '03', option: 'Tell me pricing' },
+    ],
+  },
+  {
+    message: `We make gold and diamond jwellery design, wax printing and more.`,
+    replyTo: '01',
+    options: [
+      { id: '04', option: 'Ok, thank you.' },
+      { id: '05', option: `I'd like to know more.` },
+    ],
+  },
+  {
+    message: `We use gold, diamond or any custom stone according to the request. `,
+    replyTo: '02',
+    options: [
+      { id: '04', option: 'Ok, thank you.' },
+      { id: '05', option: `I'd like to know more.` },
+    ],
+  },
+  {
+    message: `The pricing would be around 3k-4k USD and more, this will be calculated according to the design and the materials used.`,
+    replyTo: '03',
+    options: [
+      { id: '04', option: 'Ok, thank you.' },
+      { id: '05', option: `I'd like to know more.` },
+    ],
+  },
+  {
+    message: `You're most welcomed! If you want to know more details, contact us via our WhatsApp. The Link is below 👇.`,
+    whatsapp: true,
+    replyTo: '04',
+    options: [
+      { id: '01', option: 'Tell me services' },
+      { id: '02', option: 'Which Material you use?' },
+      { id: '03', option: 'Tell me pricing' },
+    ],
+  },
+  {
+    message: `If you want to know more details, contact us via our WhatsApp. The Link is below 👇.`,
+    whatsapp: true,
+    replyTo: '05',
+    options: [
+      { id: '01', option: 'Tell me services' },
+      { id: '02', option: 'Which Material you use?' },
+      { id: '03', option: 'Tell me pricing' },
+    ],
+  },
+]

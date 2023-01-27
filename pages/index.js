@@ -6,6 +6,7 @@ import Hero from '@/components/Hero/Hero'
 import DietSection from '@/components/Diets'
 import WhatYouGet from '@/components/WhatYouGet'
 import SportSection from '@/components/SportsEvents'
+import Chat from '../components/Chat'
 
 export default function Home() {
   return (
@@ -18,11 +19,13 @@ export default function Home() {
       </Head>
       <Layout>
         <Hero />
-        <WhatYouGet/>
-        <DietSection/>
-        <div className='py-3 bg-gray-100'>
-          
-        <SportSection/>
+        <WhatYouGet />
+        <DietSection />
+        <div className="py-3 bg-gray-100">
+          <SportSection />
+        </div>
+        <div className="fixed z-50 right-6 md:right-12 bottom-4 md:bottom-8">
+          <Chat />
         </div>
       </Layout>
     </div>
