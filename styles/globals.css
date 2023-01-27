@@ -10,6 +10,9 @@
   .container{
     @apply max-w-[80rem] lg:px-16 py-3 px-4 mx-auto
   }
+  .grid-gallery-item_check-button{
+    @apply !hidden hover:hidden
+  }
 }
 
 
@@ -45,3 +48,5 @@
   height: 100%;
   object-fit: cover;
 }
+
+

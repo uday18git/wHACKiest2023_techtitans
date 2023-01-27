@@ -5,6 +5,7 @@ import Layout from '@/components/Layouts/Layout'
 import Hero from '@/components/Hero/Hero'
 import DietSection from '@/components/Diets'
 import WhatYouGet from '@/components/WhatYouGet'
+import SportSection from '@/components/SportsEvents'
 
 export default function Home() {
   return (
@@ -19,6 +20,10 @@ export default function Home() {
         <Hero />
         <WhatYouGet/>
         <DietSection/>
+        <div className='py-3 bg-gray-100'>
+          
+        <SportSection/>
+        </div>
       </Layout>
     </div>
   )
