@@ -143,7 +143,7 @@ const Index = () => {
               />
               <Link legacyBehavior
               
-                href={`https://wa.me/9959194730?text=Hello,%20I%20reached%20you%20from%20your%20website%20and%20I%20would%20like%20to...`}
+                href={`https://wa.me/9606235965?text=Hello,%20I%20reached%20you%20from%20your%20website%20and%20I%20would%20like%20to...`}
                 >
                 <a
                   target={'_blank'}

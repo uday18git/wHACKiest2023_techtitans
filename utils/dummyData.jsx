@@ -86,21 +86,21 @@ export const replies = [
   {
     message: `Hi! I'm Mr. Chatbot 😎 Nice to meet you! 👋. How can I help you?`,
     options: [
-      { id: '01', option: 'Tell me services' },
-      { id: '02', option: 'Which Material you use?' },
-      { id: '03', option: 'Tell me pricing' },
+      { id: '01', option: 'Could you detail me about your services?' },
+      { id: '02', option: 'What are the pricing options for the diet plans?' },
+      { id: '03', option: 'How is the pricing done for the sporting events?' },
     ],
   },
   {
-    message: `We make gold and diamond jwellery design, wax printing and more.`,
+    message: `Our services mainly include providing you meals regularly according to your chosen diet plan and also alerting you about sporting events that are happening around you,by doing so,we aim to support your fitness journey to the fullest.`,
     replyTo: '01',
     options: [
-      { id: '04', option: 'Ok, thank you.' },
-      { id: '05', option: `I'd like to know more.` },
+      { id: '04', option: 'How does the diet plan option work?' },
+      { id: '05', option: `How does the sporting events option work?` },
     ],
   },
   {
-    message: `We use gold, diamond or any custom stone according to the request. `,
+    message: `We have tied up with local restaurants,and each of them have come up with their own respective diet plans,you can choose the diet plan of your liking,and the restaurant will bring you these meals to your doorstep `,
     replyTo: '02',
     options: [
       { id: '04', option: 'Ok, thank you.' },
@@ -108,7 +108,7 @@ export const replies = [
     ],
   },
   {
-    message: `The pricing would be around 3k-4k USD and more, this will be calculated according to the design and the materials used.`,
+    message: `We have partnered up with various stadiums and courts.Sporting events will be conducted at these venues regularly,and you can participate in these events by registering from our website`,
     replyTo: '03',
     options: [
       { id: '04', option: 'Ok, thank you.' },
@@ -121,8 +121,8 @@ export const replies = [
     replyTo: '04',
     options: [
       { id: '01', option: 'Tell me services' },
-      { id: '02', option: 'Which Material you use?' },
-      { id: '03', option: 'Tell me pricing' },
+      { id: '02', option: 'What are the pricing options for the diet plans?' },
+      { id: '03', option: 'How is the pricing done for the sporting events?' },
     ],
   },
   {
@@ -131,8 +131,8 @@ export const replies = [
     replyTo: '05',
     options: [
       { id: '01', option: 'Tell me services' },
-      { id: '02', option: 'Which Material you use?' },
-      { id: '03', option: 'Tell me pricing' },
+      { id: '02', option: 'What are the pricing options for the diet plans?' },
+      { id: '03', option: 'How is the pricing done for the sporting events?' },
     ],
   },
 ]

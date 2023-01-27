@@ -6,10 +6,13 @@ import Typography from '@mui/material/Typography'
 import { Avatar, Button, CardActionArea, CardActions } from '@mui/material'
 import { Box } from '@mui/system'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Diet() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} 
+    
+    >
       <CardActionArea>
         <CardMedia
           component="img"

@@ -15,6 +15,8 @@ import CircularProgress, {
 import LinearProgress, {
   linearProgressClasses,
 } from '@mui/material/LinearProgress'
+import { PieChart } from 'react-minimal-pie-chart'
+import ReactMinimalPieChart from 'react-minimal-pie-chart'
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -29,26 +31,43 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }))
 
+const icons = [
+  {
+    icon:'/images/instagram.png'
+  },
+  {
+    icon:'/images/whatsapp.png'
+  },
+  {
+    icon:'/images/linkedin.png'
+  },
+  
+]
+
 const badgeData = [
   {
-    Icon: GiStrongMan,
+    Icon: '/images/heart.png',
     title: 'Experience',
     short: '5+ years',
+    color: 'red-900',
   },
   {
-    Icon: GiStrongMan,
-    title: 'Experience',
-    short: '5+ years',
+    Icon: '/images/dumbbell.png',
+    title: 'Achievment',
+    short: 'All time Champion',
+    color: 'blue-800',
   },
   {
-    Icon: GiStrongMan,
+    Icon: '/images/strength.png',
     title: 'Experience',
     short: '5+ years',
+    color: 'orange-600',
   },
   {
-    Icon: GiStrongMan,
+    Icon:'/images/renewable-energy.png',
     title: 'Experience',
     short: '5+ years',
+    color: 'green-800',
   },
 ]
 
@@ -122,9 +141,12 @@ const Profile = () => {
               {badgeData.map((item, i) => (
                 <div className="flex gap-3 py-2 px-3">
                   <div className="flex gap-3  items-center mx-auto">
-                    <item.Icon className="text-2xl" />
+                    {/* <item.Icon className="text-2xl" /> */}
+                    <img src={item.Icon} alt="" className="w-[60px]" />
                     <div>
-                      <h4 className="text-red-600 font-semibold text-lg">
+                      <h4
+                        className={`text-[${item.color}] font-semibold text-lg`}
+                      >
                         {item.title}
                       </h4>
                       <p className="text-gray-800 text-md">{item.short}</p>
@@ -135,11 +157,24 @@ const Profile = () => {
               ))}
             </div>
 
-            <div>
-              <div className="flex flex-col mt-10 gap-3">
-                <h2 className="font-bold text-4xl mt-3 mb-3 text-gray-900">
-                  Progress
-                </h2>
+            <h2 className="font-bold text-4xl mt-3 mb-3 text-gray-900">
+              Progress
+            </h2>
+
+            <div className="flex md:flex-row flex-col gap-2 space-x-5 items-center">
+              <div className="flex-1 max-w-[400px]">
+                <PieChart
+                  data={[
+                    { title: 'One', value: 10, color: '#E38627' },
+                    { title: 'Two', value: 15, color: '#C13C37' },
+                    { title: 'Three', value: 20, color: '#6A2135' },
+                  ]}
+                />
+
+              
+              </div>
+
+              <div className="flex flex-col mt-10 gap-3 flex-1 w-full">
                 <div className="flex flex-col gap-1 ">
                   <h4>progress 1</h4>
                   <BorderLinearProgress
@@ -164,6 +199,25 @@ const Profile = () => {
                     color="success"
                   />
                 </div>
+                <div className="flex flex-col gap-1">
+                  <h4>progress 3</h4>
+                  <BorderLinearProgress
+                    variant="determinate"
+                    value={40}
+                    color="success"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <h2 className="font-bold text-gray-800 text-3xl">
+                Contact Links
+              </h2>
+              <div className="flex items-center gap-10 mt-10">
+                {icons.map(({ icon }, i) => (
+                  <img src={icon} alt="" className="w-[70px] cursor-pointer" />
+                ))}
               </div>
             </div>
           </div>

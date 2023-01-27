@@ -8,6 +8,8 @@ import WhatYouGet from '@/components/WhatYouGet'
 import SportSection from '@/components/SportsEvents'
 import Chat from '../components/Chat'
 
+
+
 export default function Home() {
   return (
     <div className="font-poppins">
