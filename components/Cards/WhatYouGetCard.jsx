@@ -12,7 +12,7 @@ const WhatYouGetCard = ({index}) => {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 100 }}
             transition={{ delay: index * 0.2, duration: 0.9 }}
-            src="/images/happygroup.jpg"
+            src="/images/event3.webp"
             alt=""
             className="max-w-[400px] rounded-lg"
           />
@@ -23,12 +23,12 @@ const WhatYouGetCard = ({index}) => {
             className="flex flex-col gap-3 flex-1"
           >
             <h2 className="font-semibold text-2xl text-gray-400">
-              Get Suggestions on whats best for you
+            Bring your A-game to the field with our local sports events.
             </h2>
             <p className="text-white text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              veritatis obcaecati beatae corrupti voluptates quis nobis alias.
-              Beatae, ut distinctio!
+            We'll connect you to the sports organizers near you, 
+            you can join the games and level up with others.
+            Improve your metrics to bring your sporting career into limelight. 
             </p>
             <a href="#diet">
               <TransparentBtn
@@ -47,12 +47,12 @@ const WhatYouGetCard = ({index}) => {
             className="flex flex-col gap-3 "
           >
             <h2 className="font-semibold text-2xl text-gray-400">
-              Get Suggestions on whats best for you
+            Your body deserves the best, our diet planner will help you to achieve it.
             </h2>
             <p className="text-white text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              veritatis obcaecati beatae corrupti voluptates quis nobis alias.
-              Beatae, ut distinctio!
+            We provide personalized diets with our diet experts , 
+            no need to worry about your diet , we've got it!
+            we'll deliver it to you on door! 
             </p>
             <a href="#diet">
               <TransparentBtn
@@ -65,7 +65,7 @@ const WhatYouGetCard = ({index}) => {
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 100 }}
             transition={{ delay: index * 0.2, duration: 0.9 }}
-            src="/images/happygroup.jpg"
+            src="/images/dietbg.jpg"
             alt=""
             className="max-w-[400px] rounded-lg"
           />

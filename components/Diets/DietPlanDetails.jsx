@@ -11,17 +11,16 @@ const DietPlanDetails = () => {
   return (
     <div className="flex flex-col  shadow-lg space-x-3 mx-auto gap-5">
       <img
-        src="/images/happygroup.jpg"
+        src="/images/diet1.jpg"
         alt=""
         className=" rounded-md max-h-[800px] max-w-[900px] mx-auto"
       />
       <div className="flex flex-col lg:flex-row gap-5">
         <div className="flex flex-col space-y-4 ">
           <p className="text-gray-300 text-xl ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            itaque quas beatae sit voluptates cum nesciunt repellendus quidem
-            corporis laboriosam, rem sequi dicta! Accusantium quam, laborum
-            iusto deleniti provident magnam.
+          The Mediterranean diet is a dietary pattern inspired by the traditional eating habits of people living in Mediterranean countries such as Greece, Italy, and Spain.
+          It emphasizes the consumption of whole, unprocessed foods such as fruits, vegetables, whole grains, legumes, and nuts, while limiting the intake of red meat, processed foods, and added sugars. The diet also includes moderate amounts of fish, poultry, and dairy products, 
+          and encourages the use of olive oil as the primary source of fat.
           </p>
 
           <div className="flex items-center gap-4">
@@ -42,8 +41,8 @@ const DietPlanDetails = () => {
             <div className="flex space-x-2 items-center">
               <TiTick className="text-green-800" />
               <h3 className="font-semibold text-gray-400 text-lg">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Temporibus, repellendus!
+              1.Reduced risk of heart disease: The Mediterranean diet is rich in heart-healthy fats, such as olive oil, and low in saturated fat,
+              which can help lower cholesterol levels and reduce the risk of heart disease
               </h3>
             </div>
           ))}

@@ -17,16 +17,18 @@ export default function Diet() {
         <CardMedia
           component="img"
           height="110"
-          image="/images/food1.jpg"
+          image="/images/diet2.jpg"
           alt="green iguana"
           className="h-[200px] w-full hover:scale-110 duration-200 transition-all ease-in-out"
         />
         <CardContent className=''>
           <Typography gutterBottom variant="h5" component="div">
-            Men's Special
+            The Mediterranean Diet
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, corrupti?
+          This diet emphasizes the consumption of fruits, vegetables, whole grains, lean proteins (such as fish and poultry), 
+          and healthy fats (such as olive oil). It also limits red meat and processed foods, 
+          and includes moderate amounts of red wine.
           </Typography>
           <Box className='flex mt-3 items-center space-x-3'>
             <Avatar
